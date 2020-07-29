@@ -54,7 +54,7 @@ header a:hover {
 input{
     padding: 8px;
     border: 1px solid #eeeeee;
-    width: 320px;
+    width: 280px;
 }
 
 button{
@@ -94,8 +94,13 @@ p a:hover {
     text-align: center;
 }
 #formDiv{
-    margin-bottom: 16px;
+    padding: 0 auto;
+    margin: 0 auto;
     text-align: center;
+}
+
+#searchDiv{
+    padding: 0 16px;
 }
 
 #locationP{
