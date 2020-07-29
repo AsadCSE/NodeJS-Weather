@@ -1,24 +1,91 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Weather</title>
-        <link rel="icon" href="./img/weather.png">
-        <link rel="stylesheet" href="./css/styles.css">
+        {{>head}}
     </head>
 
     <body>
         <div class="main-content">
-            {{>header}}
+            <div class="row">
+                <div class="col col-sm-3"></div>
+                <div class="col col-sm-6">
+                    {{>header}}
 
-            <p>Name a place and hit enter!</p>
+                    <div class="row">
+                        <div class="row" id="formDiv">
+                            <form>
+                                <input placeholder="search location">
+                                <button>Search</button>
+                            </form>
+                            <p id="successMessage"></p>
+                            <p id="errorMessage"></p>
+                        </div>
 
-            <form>
-                <input placeholder="Location">
-                <button>Search</button>
-            </form>
+                        <div class="row" >
+                            <p id="locationP"></p>
+                        </div>
 
-            <p id="successMessage"></p>
-            <p id="errorMessage"></p>
+                        <div class="row">
+                            <p id="latlonData" class="logocomptext"></p>
+                        </div>
+
+                        <div class="row" id="wlogoBanner">
+                            <div class="col col-sm-2 col-xs-2" id="logoConatiner">
+                                <img src="" id="weatherLogo" width="50px"/>
+                            </div>
+                            <div class="col col-sm-10 col-xs-10">
+                                <p id="weatherDesc"></p>
+                            </div>
+                        </div>
+
+                        <div class="row" id="banaftrow">
+                            <div class="col col-sm-6 col-xs-6">
+                                <p id="tempP" class="rSide"></p>
+                            </div>
+                            <div class="col col-sm-6 col-xs-6">
+                                <p id="tempD" class="lSide"></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col col-sm-6 col-xs-6">
+                                <p id="humP" class="rSide"></p>
+                            </div>
+                            <div class="col col-sm-6 col-xs-6">
+                                <p id="humD" class="lSide"></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col col-sm-6 col-xs-6">
+                                <p id="feelP" class="rSide"></p>
+                            </div>
+                            <div class="col col-sm-6 col-xs-6">
+                                <p id="feelD" class="lSide"></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col col-sm-6 col-xs-6">
+                                <p id="winP" class="rSide"></p>
+                            </div>
+                            <div class="col col-sm-6 col-xs-6">
+                                <p id="winD" class="lSide"></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col col-sm-6 col-xs-6">
+                                <p id="uvP" class="rSide"></p>
+                            </div>
+                            <div class="col col-sm-6 col-xs-6">
+                                <p id="uvD" class="lSide"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-sm-3"></div>
+            </div>
         </div>
         
         {{>footer}}

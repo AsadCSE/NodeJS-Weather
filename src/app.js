@@ -23,17 +23,9 @@ app.get('', (req,res)=>{
 
 app.get('/about', (req,res) =>{
     res.render('about',{
-        title: 'About Me',
+        title: 'About',
         name: 'Asad'
     });
-})
-
-app.get('/help', (req,res) => {
-    res.render('help',{
-        title: 'Help page',
-        name: 'Asad',
-        msg: 'this is an entire help message'
-    })
 })
 
 app.get('/weather', (req,res) => {
@@ -56,20 +48,6 @@ app.get('/weather', (req,res) => {
     })
 })
 
-app.get('/products',(req,res) => {
-    console.log(req.query.product)
-    res.send({
-        products: []
-    })
-})
-
-app.get('/help/*',(req,res)=>{
-    res.render('404',{
-        errorMsg: 'help Page not Found',
-        name: 'asad'
-    });
-})
-
 app.get('*',(req,res)=>{
     res.render('404',{
         errorMsg: '404 Page not Found',
@@ -78,5 +56,5 @@ app.get('*',(req,res)=>{
 })
 
 app.listen(port, ()=>{
-    console.log('server is up at' + port);
+    console.log('server is up at ' + port);
 });

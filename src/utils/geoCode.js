@@ -5,7 +5,7 @@ module.exports = geoCode = (address, callback) => {
     request({url:url, json: true},(error,response)=>{
         if(error){
             callback('unable to connect to locaion', undefined);
-        } else if (response.body.features.length===0){
+        } else if (!response.body.features.length){
             callback('location not found', undefined);
         }else{
             callback(undefined,{

@@ -1,29 +1,35 @@
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 body{
     color: #333333;
     font-family: arial;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 16px;
-
+    height: 100%;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 .main-content{
     flex-grow: 1;
+    padding:0 16px;
 }
 
 footer{
     color: #888888;
     border-top: 1px solid #eeeeee;
     margin-top: 16px;
-    padding:16px 0;
+    padding:16px;
+}
+footer p a{
+    color: #00cc00;
 }
 
 header{
-    margin-top: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
+    color: #00cc00;
 }
 
 h1{
@@ -35,6 +41,10 @@ header a{
     color:#888888;
     margin-right: 16px;
     text-decoration: none;
+    padding-bottom: 8px;
+}
+header a:hover {
+    text-decoration: none;
 }
 
 .portrait{
@@ -44,12 +54,97 @@ header a{
 input{
     padding: 8px;
     border: 1px solid #eeeeee;
+    width: 320px;
 }
 
 button{
     padding: 8px;
-    background: #888888;
-    border: 1px solid #888888;
+    background: #00cc00;
+    border: 1px solid #00cc00;
     color: white;
     cursor: pointer;
+}
+
+#successMessage{
+    color: #00cc00;
+    margin: 8px;
+}
+
+#errorMessage{
+    color: red;
+    margin: 8px;
+}
+
+#aboutMe{
+    color: #333333;
+    max-width: 600px;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+p a{
+    color: #00cc00;
+    text-decoration: none;
+}
+p a:hover {
+    text-decoration: none;
+}
+
+#aboutDiv{
+    text-align: center;
+}
+#formDiv{
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+#locationP{
+    font-size: 26px;
+    color: #00cc00;
+    text-align: center;
+    padding: 0 16px;
+}
+
+#latlonData{
+    text-align: center;
+    color: #666666;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 16px;
+}
+
+#descDev1{
+    padding-top: 16px;
+}
+
+.rSide{
+    color: #00cc00;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: right;
+    padding: 1px;
+}
+
+.lSide{
+    color: #888888;
+    font-size: 16px;
+    text-align: left;
+    padding: 1px;
+}
+
+#wlogoBanner{
+    margin:0 auto;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+#weatherDesc{
+    padding-top: 14px;
+    color: #666666;
+    font-weight: bold;
+    text-align: center;
+}
+
+#banaftrow{
+    margin-top: 16px;
 }

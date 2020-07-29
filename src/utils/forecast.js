@@ -14,7 +14,8 @@ module.exports =  forecast = (geoData, callback) => {
                 feelslike   : response.body.current.feelslike,
                 wind_speed  : response.body.current.wind_speed,
                 wind_dir    : response.body.current.wind_dir,
-                uv_index    : response.body.current.uv_index
+                uv_index    : response.body.current.uv_index,
+                icon        : response.body.current.weather_icons[0]
             });
         }
     });
